@@ -54,13 +54,23 @@ export default function Header() {
                             </li>
                         ))}
                     </ul>
-                    <Link href="/contact" className={styles.ctaButton}>
+                    <Link
+                        href="/contact"
+                        className={styles.ctaButton}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    >
                         Inquire Now
                     </Link>
                 </nav>
 
+                {/* Mobile menu overlay */}
+                <div
+                    className={`${styles.overlay} ${isMobileMenuOpen ? styles.open : ''}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                />
+
                 <button
-                    className={styles.mobileMenuBtn}
+                    className={`${styles.mobileMenuBtn} ${isMobileMenuOpen ? styles.open : ''}`}
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     aria-label="Toggle menu"
                 >
