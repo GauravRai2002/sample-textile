@@ -1,0 +1,392 @@
+.main {
+    padding-top: 0;
+}
+
+/* Page Hero - Premium Design */
+.pageHero {
+    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+    padding: calc(100px + var(--space-4xl)) 0 var(--space-4xl);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.pageHero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.06) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+.pageHero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+}
+
+.heroSubtitle {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--color-gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: var(--space-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+}
+
+.heroSubtitle::before,
+.heroSubtitle::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--color-gold);
+}
+
+.pageHero h1 {
+    color: var(--color-white);
+    font-weight: 400;
+    margin-bottom: var(--space-lg);
+}
+
+.pageHero p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: var(--text-lg);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Contact Section */
+.contact {
+    background: var(--color-ivory);
+    position: relative;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-4xl);
+    position: relative;
+    z-index: 1;
+}
+
+/* Form Section */
+.formSection {
+    background: var(--color-white);
+    padding: var(--space-3xl);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 60px rgba(26, 26, 46, 0.08);
+    position: relative;
+}
+
+.formSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-gold), var(--color-gold-light), var(--color-gold));
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.formSection h2 {
+    font-weight: 400;
+    margin-bottom: var(--space-sm);
+    color: var(--color-navy);
+}
+
+.formSection>p {
+    color: var(--color-gray);
+    margin-bottom: var(--space-2xl);
+    font-size: var(--text-base);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.formGroup label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-navy);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-ivory);
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--color-charcoal);
+    transition: all 0.3s ease;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: var(--color-gray-light);
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    outline: none;
+    background: var(--color-white);
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.formGroup textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.submitBtn {
+    background: var(--color-navy);
+    color: var(--color-white);
+    padding: var(--space-lg) var(--space-3xl);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    align-self: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.submitBtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.submitBtn:hover {
+    background: var(--color-gold);
+    color: var(--color-navy);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.submitBtn:hover::before {
+    left: 100%;
+}
+
+/* Info Section */
+.infoSection h2 {
+    font-weight: 400;
+    margin-bottom: var(--space-2xl);
+    color: var(--color-navy);
+}
+
+.infoCard {
+    background: var(--color-white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+    box-shadow: 0 4px 20px rgba(26, 26, 46, 0.05);
+    border-left: 3px solid var(--color-gold);
+    transition: all 0.3s ease;
+}
+
+.infoCard:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 30px rgba(26, 26, 46, 0.1);
+}
+
+.infoCard h3 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--color-navy);
+    margin-bottom: var(--space-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.infoCard h3 .icon {
+    color: var(--color-gold);
+    font-size: var(--text-lg);
+}
+
+.infoCard p {
+    color: var(--color-gray);
+    line-height: 1.8;
+    margin: 0;
+    font-size: var(--text-sm);
+}
+
+.infoCard a {
+    color: var(--color-navy);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.infoCard a:hover {
+    color: var(--color-gold);
+}
+
+.whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: #25D366;
+    color: var(--color-white) !important;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: var(--space-md);
+    transition: all 0.3s ease;
+}
+
+.whatsapp:hover {
+    background: #128C7E !important;
+    color: var(--color-white) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* Map Placeholder */
+.map {
+    margin-top: var(--space-lg);
+    height: 180px;
+    background: linear-gradient(135deg, var(--color-ivory) 0%, var(--color-cream) 100%);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gray);
+    gap: var(--space-sm);
+    border: 2px dashed rgba(26, 26, 46, 0.1);
+}
+
+.map span {
+    font-size: var(--text-2xl);
+}
+
+.map p {
+    margin: 0;
+    font-size: var(--text-sm);
+}
+
+/* Quick Contact Bar */
+.quickContact {
+    display: flex;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid rgba(26, 26, 46, 0.08);
+}
+
+.quickContact a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--color-navy);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.quickContact a:hover {
+    color: var(--color-gold);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .contactGrid {
+        grid-template-columns: 1fr;
+        gap: var(--space-3xl);
+    }
+
+    .formSection {
+        order: 2;
+    }
+
+    .infoSection {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .pageHero {
+        padding: calc(100px + var(--space-2xl)) 0 var(--space-2xl);
+    }
+
+    .heroSubtitle::before,
+    .heroSubtitle::after {
+        width: 20px;
+    }
+
+    .formSection {
+        padding: var(--space-xl);
+    }
+
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+
+    .submitBtn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}

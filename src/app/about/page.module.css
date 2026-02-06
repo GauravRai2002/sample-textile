@@ -1,0 +1,211 @@
+.main {
+    padding-top: 100px;
+}
+
+/* Page Hero */
+.pageHero {
+    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+    padding: var(--space-5xl) 0 var(--space-3xl);
+    text-align: center;
+}
+
+.pageHero h1 {
+    color: var(--color-white);
+    margin-bottom: var(--space-md);
+}
+
+.pageHero p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--text-lg);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Story Section */
+.story {
+    background: var(--color-cream);
+}
+
+.storyContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4xl);
+    align-items: center;
+}
+
+.storyText h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.storyText p {
+    font-size: var(--text-lg);
+    line-height: 1.9;
+    margin-bottom: var(--space-lg);
+}
+
+.storyImage {
+    position: relative;
+    height: 500px;
+    background: var(--color-ivory);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.storyImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Values Section */
+.values {
+    background: var(--color-white);
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2xl);
+}
+
+.valueCard {
+    text-align: center;
+    padding: var(--space-2xl);
+}
+
+.valueIcon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--space-lg);
+    background: var(--color-ivory);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-3xl);
+}
+
+.valueCard h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-md);
+}
+
+.valueCard p {
+    color: var(--color-gray);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Artisans Section */
+.artisans {
+    background: var(--color-ivory);
+}
+
+.artisansGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+}
+
+.artisanCard {
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.artisanImage {
+    height: 250px;
+    background: var(--color-navy-light);
+    overflow: hidden;
+}
+
+.artisanImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.artisanInfo {
+    padding: var(--space-lg);
+    text-align: center;
+}
+
+.artisanInfo h4 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-xs);
+}
+
+.artisanInfo p {
+    color: var(--color-gold);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Certifications */
+.certifications {
+    background: var(--color-white);
+    text-align: center;
+}
+
+.certGrid {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3xl);
+    flex-wrap: wrap;
+}
+
+.certItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.certIcon {
+    width: 100px;
+    height: 100px;
+    background: var(--color-ivory);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-sm);
+    color: var(--color-navy);
+    font-weight: 600;
+    text-align: center;
+    padding: var(--space-md);
+}
+
+.certItem span {
+    font-size: var(--text-sm);
+    color: var(--color-gray);
+}
+
+@media (max-width: 968px) {
+    .storyContent {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .storyImage {
+        order: -1;
+        height: 350px;
+    }
+
+    .valuesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .artisansGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .artisansGrid {
+        grid-template-columns: 1fr;
+    }
+}

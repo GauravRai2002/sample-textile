@@ -1,0 +1,139 @@
+.testimonials {
+    background: var(--color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(212, 175, 55, 0.03) 100%);
+    pointer-events: none;
+}
+
+.label {
+    display: block;
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--color-gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: var(--space-md);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+.card {
+    background: var(--color-ivory);
+    padding: var(--space-2xl);
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInUp 0.8s ease backwards;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--color-gold);
+    transition: width 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(26, 26, 46, 0.08);
+}
+
+.card:hover::before {
+    width: 100%;
+}
+
+.quoteIcon {
+    color: var(--color-gold);
+    opacity: 0.3;
+    margin-bottom: var(--space-lg);
+}
+
+.quote {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--color-navy);
+    line-height: 1.8;
+    margin-bottom: var(--space-xl);
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.authorInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.authorName {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-navy);
+}
+
+.authorRole {
+    font-size: var(--text-xs);
+    color: var(--color-gray);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card:nth-child(3) {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card:nth-child(3) {
+        grid-column: span 1;
+    }
+
+    .card {
+        padding: var(--space-xl);
+    }
+
+    .quote {
+        font-size: var(--text-base);
+    }
+}
