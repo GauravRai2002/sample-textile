@@ -51,9 +51,9 @@ export default function About() {
 
             <section className={styles.pageHero}>
                 <div className="container">
-                    <h1>Our Heritage</h1>
+                    <h1>About KISH</h1>
                     <div className="divider"></div>
-                    <p>Four decades of preserving India's textile legacy while serving the world's most discerning clientele.</p>
+                    <p>Five decades of manufacturing excellence from the heart of Kolkata.</p>
                 </div>
             </section>
 
@@ -62,27 +62,83 @@ export default function About() {
                 <div className="container">
                     <div className={styles.storyContent}>
                         <div className={styles.storyText}>
-                            <h2>A Legacy of Excellence</h2>
+                            <h2>Since 1969</h2>
                             <div className="divider" style={{ marginLeft: 0 }}></div>
                             <p>
-                                Founded in 1985, Artisan Textile House began with a simple mission: to share the
-                                extraordinary beauty of Indian textiles with the world. What started as a small
-                                family business has grown into one of India's most respected textile export houses.
+                                At Kolkata, manufacturing excellence has been our tradition since 1969.
+                                What began as a small textile workshop has grown into one of India's most
+                                respected manufacturing facilities, serving clients across 50+ countries.
                             </p>
                             <p>
-                                Today, we work directly with over 200 master artisans across India, ensuring fair
-                                wages and preserving traditional techniques that might otherwise be lost to time.
+                                We are a vertically integrated textile manufacturing company where quality
+                                and sustainability are at the heart of everything we do. From spinning to
+                                printing, to delivering the finished product — we control every step.
                             </p>
                             <p>
-                                Our clientele includes the world's leading fashion houses, luxury hotels, and
-                                interior designers who trust us to deliver exceptional quality, every time.
+                                Today, KISH partners with leading brands worldwide, delivering exceptional
+                                quality backed by over five decades of expertise and multiple international
+                                certifications.
                             </p>
                         </div>
                         <div className={styles.storyImage}>
                             <img
                                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
-                                alt="Traditional weaving"
+                                alt="KISH manufacturing heritage"
                             />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* History Timeline */}
+            <section className={`section ${styles.history}`}>
+                <div className="container">
+                    <div className="section-header">
+                        <h2>Our History</h2>
+                        <div className="divider"></div>
+                    </div>
+                    <div className={styles.timeline}>
+                        <div className={styles.timelineItem}>
+                            <div className={styles.timelineYear}>1969</div>
+                            <div className={styles.timelineContent}>
+                                <h4>Started Exporting</h4>
+                                <p>We began our export journey with Japan as our first international market.</p>
+                            </div>
+                        </div>
+                        <div className={styles.timelineItem}>
+                            <div className={styles.timelineYear}>1993</div>
+                            <div className={styles.timelineContent}>
+                                <h4>Weaving Looms Setup</h4>
+                                <p>Established our own weaving loom facility in Surat, Gujarat.</p>
+                            </div>
+                        </div>
+                        <div className={styles.timelineItem}>
+                            <div className={styles.timelineYear}>1997</div>
+                            <div className={styles.timelineContent}>
+                                <h4>Screen Printing Unit</h4>
+                                <p>Developed one of the largest screen-printing units with 200,000 meters capacity per month.</p>
+                            </div>
+                        </div>
+                        <div className={styles.timelineItem}>
+                            <div className={styles.timelineYear}>2007</div>
+                            <div className={styles.timelineContent}>
+                                <h4>Stitching Unit Setup</h4>
+                                <p>Launched a dedicated stitching unit with over 600 machines.</p>
+                            </div>
+                        </div>
+                        <div className={styles.timelineItem}>
+                            <div className={styles.timelineYear}>2017</div>
+                            <div className={styles.timelineContent}>
+                                <h4>SRTEPC Award</h4>
+                                <p>Recognized as the third-best exporter by the Ministry of Textiles, India.</p>
+                            </div>
+                        </div>
+                        <div className={styles.timelineItem}>
+                            <div className={styles.timelineYear}>2022</div>
+                            <div className={styles.timelineContent}>
+                                <h4>Digital Printing Unit</h4>
+                                <p>Implementation of a modern digital printing unit for enhanced capabilities.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -57,6 +57,85 @@
     object-fit: cover;
 }
 
+/* History Timeline */
+.history {
+    background: var(--color-ivory);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: var(--space-4xl);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--color-plum), var(--color-gold));
+}
+
+.timelineItem {
+    position: relative;
+    display: flex;
+    gap: var(--space-xl);
+    padding-bottom: var(--space-3xl);
+}
+
+.timelineItem:last-child {
+    padding-bottom: 0;
+}
+
+.timelineYear {
+    position: absolute;
+    left: calc(-1 * var(--space-4xl) - 20px);
+    width: 80px;
+    background: var(--color-plum);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    padding: var(--space-sm) var(--space-md);
+    text-align: center;
+}
+
+.timelineContent {
+    flex: 1;
+    background: var(--color-white);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+}
+
+.timelineContent::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid var(--color-white);
+}
+
+.timelineContent h4 {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    color: var(--color-navy);
+    margin-bottom: var(--space-sm);
+}
+
+.timelineContent p {
+    color: var(--color-gray);
+    line-height: 1.7;
+    margin: 0;
+}
+
 /* Values Section */
 .values {
     background: var(--color-white);
@@ -201,6 +280,16 @@
 
     .artisansGrid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timeline {
+        padding-left: var(--space-3xl);
+    }
+
+    .timelineYear {
+        left: calc(-1 * var(--space-3xl) - 15px);
+        width: 70px;
+        font-size: var(--text-base);
     }
 }
 

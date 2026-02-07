@@ -96,6 +96,43 @@
   z-index: -1;
 }
 
+/* Certifications Section */
+.certifications {
+  background: linear-gradient(180deg, #f5f7fa 0%, #e8ecf1 100%);
+  padding: var(--space-3xl) 0;
+}
+
+.certGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3xl);
+}
+
+.certItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+}
+
+.certName {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-navy);
+  letter-spacing: 1px;
+}
+
+.certDesc {
+  font-size: var(--text-xs);
+  color: var(--color-gray);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 /* Stats Section */
 .stats {
   background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);

@@ -174,7 +174,7 @@
 /* Scroll Indicator */
 .scrollIndicator {
     position: absolute;
-    bottom: var(--space-3xl);
+    bottom: var(--space-sm);
     left: 50%;
     transform: translateX(-50%);
     display: flex;

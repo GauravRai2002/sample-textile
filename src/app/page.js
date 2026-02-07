@@ -8,23 +8,32 @@ import styles from './page.module.css';
 
 const featuredCollections = [
   {
-    title: "Banarasi Silk",
-    category: "Heritage Weaves",
-    description: "Opulent silk textiles with intricate gold and silver zari work.",
+    title: "Summer Collection",
+    category: "Printed Apparel",
+    description: "Vibrant prints and breathable fabrics perfect for the season.",
     image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&q=80"
   },
   {
-    title: "Pashmina Collection",
-    category: "Luxury Wool",
-    description: "Ultra-fine cashmere from the Himalayas, handcrafted with precision.",
+    title: "Garments",
+    category: "Ready to Wear",
+    description: "Expertly crafted garments blending tradition with contemporary style.",
     image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80"
   },
   {
-    title: "Chanderi Elegance",
-    category: "Sheer Luxury",
-    description: "Lightweight fabric with golden borders and traditional motifs.",
+    title: "Accessories",
+    category: "Bags & Scarves",
+    description: "Handcrafted accessories that complement any wardrobe.",
     image: "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&q=80"
   }
+];
+
+// Certification logos
+const certifications = [
+  { name: "GOTS", description: "Global Organic Textile Standard" },
+  { name: "Bemberg", description: "Cupro Fiber" },
+  { name: "Lenzing", description: "Innovative by Nature" },
+  { name: "Woolmark", description: "Certified Wool" },
+  { name: "R·W·S", description: "Responsible Wool Standard" },
 ];
 
 export default function Home() {
@@ -33,21 +42,21 @@ export default function Home() {
       <Header />
 
       <Hero
-        subtitle="Established 1985"
-        title="Where Heritage Meets Elegance"
-        highlightWord="Elegance"
-        description="Curating the world's finest Indian textiles for discerning clients. Each piece tells a story of centuries-old craftsmanship and timeless beauty."
-        primaryBtn={{ label: "Explore Collections", href: "/collections" }}
-        secondaryBtn={{ label: "Book Consultation", href: "/contact" }}
+        subtitle="Since 1969"
+        title="Manufacturing Excellence is Our Tradition"
+        highlightWord="Tradition"
+        description="At Kolkata, we have been crafting exceptional textiles for over fifty years. Quality and sustainability are at the heart of everything we do."
+        primaryBtn={{ label: "Discover", href: "/collections" }}
+        secondaryBtn={{ label: "Our Story", href: "/about" }}
       />
 
       {/* Featured Collections */}
       <section className={`section ${styles.collections}`}>
         <div className="container">
           <div className="section-header">
-            <h2>Curated Collections</h2>
+            <h2>Our Collections</h2>
             <div className="divider"></div>
-            <p>Discover our signature textiles, each handpicked for exceptional quality and artistry.</p>
+            <p>From spinning to printing to the finished product — we bring expertise to every step.</p>
           </div>
 
           <div className={styles.collectionsGrid}>
@@ -63,27 +72,43 @@ export default function Home() {
         <div className="container">
           <div className={styles.storyContent}>
             <div className={styles.storyText}>
-              <h2>Four Decades of Excellence</h2>
+              <h2>Five Decades of Excellence</h2>
               <div className="divider"></div>
               <p>
-                Since 1985, we have been the bridge between India's master artisans and the world's most
-                prestigious fashion houses, interior designers, and luxury brands.
+                At Kolkata, manufacturing excellence has been our tradition since 1969. We are a
+                textile manufacturing company where quality and sustainability are at the heart
+                of everything we do.
               </p>
               <p>
-                Our commitment to authenticity, quality, and sustainable practices has made us the
-                preferred partner for those who demand nothing but the finest.
+                With over fifty years of experience, we have honed our expertise in the entire
+                textile manufacturing process — from spinning to printing, to delivering the
+                finished product.
               </p>
               <Link href="/about" className={`btn ${styles.storyButton}`}>
-                Discover Our Heritage
+                Read More
               </Link>
             </div>
             <div className={styles.storyImage}>
               <img
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
-                alt="Artisan at work"
+                alt="KISH manufacturing facility"
               />
               <div className={styles.storyImageDecor}></div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section className={styles.certifications}>
+        <div className="container">
+          <div className={styles.certGrid}>
+            {certifications.map((cert, index) => (
+              <div key={index} className={styles.certItem}>
+                <span className={styles.certName}>{cert.name}</span>
+                <span className={styles.certDesc}>{cert.description}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -93,7 +118,7 @@ export default function Home() {
         <div className="container">
           <div className={styles.statsGrid}>
             <div className={styles.statItem}>
-              <h3>40+</h3>
+              <h3>55+</h3>
               <p>Years of Excellence</p>
             </div>
             <div className={styles.statItem}>
@@ -101,12 +126,12 @@ export default function Home() {
               <p>Countries Served</p>
             </div>
             <div className={styles.statItem}>
-              <h3>200+</h3>
-              <p>Artisan Partners</p>
+              <h3>100%</h3>
+              <p>Sustainable Fibers</p>
             </div>
             <div className={styles.statItem}>
-              <h3>1000+</h3>
-              <p>Happy Clients</p>
+              <h3>6</h3>
+              <p>Certifications</p>
             </div>
           </div>
         </div>
@@ -118,15 +143,15 @@ export default function Home() {
       {/* CTA */}
       <section className={`section ${styles.cta}`}>
         <div className="container">
-          <h2>Ready to Experience Excellence?</h2>
+          <h2>Ready to Partner with Us?</h2>
           <div className="divider"></div>
-          <p>Let us curate the perfect textile collection for your needs. Our experts are ready to assist you.</p>
+          <p>Let us bring our manufacturing excellence to your next project. Our team is ready to assist you.</p>
           <div className={styles.ctaButtons}>
             <Link href="/contact" className="btn btn-primary">
-              Schedule a Consultation
+              Get in Touch
             </Link>
-            <Link href="/showroom" className="btn btn-white">
-              Visit Virtual Showroom
+            <Link href="/factory" className="btn btn-white">
+              View Factory Overview
             </Link>
           </div>
         </div>

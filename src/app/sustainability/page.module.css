@@ -1,0 +1,215 @@
+.main {
+    overflow-x: hidden;
+}
+
+.pageHero {
+    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+    padding: 180px 0 100px;
+    text-align: center;
+    position: relative;
+}
+
+.heroLabel {
+    display: inline-block;
+    font-size: var(--text-sm);
+    color: var(--color-sustainability);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: var(--space-lg);
+}
+
+.pageHero h1 {
+    color: var(--color-white);
+    font-weight: 400;
+    margin-bottom: var(--space-lg);
+}
+
+.pageHero p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: var(--text-lg);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Vision Section */
+.vision {
+    background: var(--color-white);
+}
+
+.visionContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4xl);
+    align-items: center;
+}
+
+.visionText h2 {
+    font-weight: 400;
+    margin-bottom: var(--space-lg);
+}
+
+.visionText p {
+    color: var(--color-gray);
+    font-size: var(--text-lg);
+    line-height: 1.9;
+    margin-bottom: var(--space-lg);
+}
+
+.visionImage img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    box-shadow: var(--shadow-xl);
+}
+
+/* Certifications */
+.certifications {
+    background: var(--color-ivory);
+}
+
+.certGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+.certCard {
+    background: var(--color-white);
+    padding: var(--space-2xl);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s ease;
+}
+
+.certCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.certIcon {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-md);
+}
+
+.certCard h3 {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    color: var(--color-navy);
+    margin-bottom: var(--space-xs);
+}
+
+.certFullName {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--color-sustainability);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--space-md);
+}
+
+.certCard p {
+    color: var(--color-gray);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Initiatives */
+.initiatives {
+    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+}
+
+.initiatives .section-header h2,
+.initiatives .section-header p {
+    color: var(--color-white);
+}
+
+.initiativesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+}
+
+.initiativeCard {
+    text-align: center;
+    padding: var(--space-xl);
+}
+
+.initiativeStat {
+    margin-bottom: var(--space-lg);
+}
+
+.statNumber {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--text-5xl);
+    color: var(--color-sustainability);
+    line-height: 1;
+    margin-bottom: var(--space-xs);
+}
+
+.statLabel {
+    font-size: var(--text-xs);
+    color: var(--color-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.initiativeCard h3 {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    color: var(--color-white);
+    font-weight: 400;
+    margin-bottom: var(--space-md);
+}
+
+.initiativeCard p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: var(--text-sm);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* CTA */
+.cta {
+    background: var(--color-ivory);
+    text-align: center;
+}
+
+.cta h2 {
+    font-weight: 400;
+}
+
+.cta p {
+    color: var(--color-gray);
+    margin-bottom: var(--space-xl);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .certGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .initiativesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .visionContent {
+        grid-template-columns: 1fr;
+    }
+
+    .certGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .initiativesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .pageHero {
+        padding: 140px 0 60px;
+    }
+}

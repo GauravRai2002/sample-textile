@@ -4,17 +4,17 @@ import styles from './Testimonials.module.css';
 
 const testimonials = [
     {
-        quote: "The quality of textiles from Artisan Textile House is unparalleled. Their Banarasi silks have become the cornerstone of our luxury evening wear collection.",
+        quote: "The quality of textiles from KISH is unparalleled. Their commitment to sustainability and craftsmanship has made them an invaluable partner for our collection.",
         author: "Isabella Marchetti",
         role: "Creative Director, Milano Fashion House",
     },
     {
-        quote: "Working with their team has been a revelation. Their attention to detail and commitment to authentic craftsmanship sets them apart in the industry.",
+        quote: "Working with KISH has been a revelation. Over five decades of manufacturing expertise is evident in every piece they deliver.",
         author: "James Chen",
         role: "Head of Procurement, Chen Interiors",
     },
     {
-        quote: "From first inquiry to delivery, the experience was exceptional. The pashmina collection exceeded our expectations in every way.",
+        quote: "From first inquiry to delivery, the experience was exceptional. Their certifications and sustainable practices align perfectly with our brand values.",
         author: "Sarah Williams",
         role: "Luxury Buyer, London",
     }

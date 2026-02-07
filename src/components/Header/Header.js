@@ -6,11 +6,11 @@ import { usePathname } from 'next/navigation';
 import styles from './Header.module.css';
 
 const navItems = [
-    { href: '/', label: 'Home' },
-    { href: '/collections', label: 'Collections' },
-    { href: '/about', label: 'Our Story' },
-    { href: '/showroom', label: 'Showroom' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/about', label: 'About Us' },
+    { href: '/collections', label: 'Collection' },
+    { href: '/sustainability', label: 'Sustainability', hasIcon: true },
+    { href: '/factory', label: 'Factory Overview' },
+    { href: '/contact', label: 'Contact Us' },
 ];
 
 export default function Header() {
@@ -37,7 +37,8 @@ export default function Header() {
         <header className={headerClass}>
             <div className={`container ${styles.headerContainer}`}>
                 <Link href="/" className={styles.logo}>
-                    Artisan<span>.</span>Textile
+                    <span className={styles.logoMain}>KISH</span>
+                    <span className={styles.logoSub}>SINCE 1969</span>
                 </Link>
 
                 <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.open : ''}`}>
@@ -46,10 +47,11 @@ export default function Header() {
                             <li key={item.href}>
                                 <Link
                                     href={item.href}
-                                    className={`${styles.navLink} ${pathname === item.href ? styles.active : ''}`}
+                                    className={`${styles.navLink} ${pathname === item.href ? styles.active : ''} ${item.hasIcon ? styles.sustainabilityLink : ''}`}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {item.label}
+                                    {item.hasIcon && <span className={styles.leafIcon}>🌿</span>}
                                 </Link>
                             </li>
                         ))}
@@ -59,7 +61,7 @@ export default function Header() {
                         className={styles.ctaButton}
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
-                        Inquire Now
+                        Get in Touch
                     </Link>
                 </nav>
 

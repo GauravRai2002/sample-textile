@@ -28,16 +28,29 @@
 }
 
 .footerLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin-bottom: var(--space-lg);
+}
+
+.logoMain {
     font-family: var(--font-heading);
     font-size: var(--text-2xl);
     font-weight: 600;
-    color: var(--color-white);
-    margin-bottom: var(--space-lg);
-    display: inline-block;
+    color: var(--color-plum);
+    letter-spacing: 4px;
+    line-height: 1;
 }
 
-.footerLogo span {
-    color: var(--color-gold);
+.logoSub {
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 3px;
+    margin-top: 2px;
 }
 
 .footerBrand p {
@@ -45,6 +58,26 @@
     font-size: var(--text-sm);
     line-height: 1.8;
     margin-bottom: var(--space-xl);
+}
+
+/* Contact Column */
+.contact address {
+    font-style: normal;
+}
+
+.contact p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: var(--text-sm);
+    margin: 0 0 var(--space-xs);
+}
+
+.contact a {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: var(--color-gold);
 }
 
 .socialLinks {
